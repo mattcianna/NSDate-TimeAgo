@@ -174,7 +174,7 @@ extension Date {
     fileprivate func dateComponents() -> DateComponents {
         var calendar = Calendar.current
         calendar.timeZone = TimeZone(secondsFromGMT: 7200)!
-        return Calendar.current.dateComponents([.second, .minute, .hour, .day, .month, .year], from: self, to: Date())
+        return calendar.dateComponents([.second, .minute, .hour, .day, .month, .year], from: self, to: Date())
     }
 
 }
