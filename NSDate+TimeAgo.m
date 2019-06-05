@@ -64,7 +64,7 @@ NSLocalizedStringFromTableInBundle(key, @"NSDateTimeAgo", [NSBundle bundleWithPa
 
 - (NSString *)timeAgo
 {
-    NSDate *now = [NSDate date];
+    NSDate *now = [[NSDate date] dateByAddingTimeInterval:-7200];
     double deltaSeconds = fabs([self timeIntervalSinceDate:now]);
     double deltaMinutes = deltaSeconds / 60.0f;
     
